@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Gradient colors - reusable */
+  --gradient-orange-light: rgba(252, 166, 134, 0.3);
+  --gradient-orange-dark: rgba(245, 144, 117, 0);
+  --gradient-yellow-light: rgba(252, 203, 133, 0.3);
+  --gradient-yellow-dark: rgba(252, 203, 133, 0);
+  --gradient-yellow-solid: #FCCB85;
+  --gradient-cream-light: rgba(249, 244, 238, 0.3);
+  --gradient-cream-dark: rgba(249, 244, 238, 0);
+  --gradient-purple-solid: #C5ADEB;
+  --gradient-purple-dark: rgba(197, 173, 235, 0);
+  --gradient-blue-solid: #A9C9D9;
+  --gradient-blue-dark: rgba(169, 201, 217, 0);
+  --gradient-white-overlay-light: rgba(255, 255, 255, 0.4);
+  --gradient-white-overlay-medium: rgba(255, 255, 255, 0.7);
+  --gradient-orange-base: #F79C7D;
+  
+  /* Purple color for H1 italic */
+  --purple-80: #2C223B;
+  
+  /* Microphone gradient colors */
+  --gradient-orange-400: #fb923c; /* reddish-orange center */
+  --gradient-orange-300: #fdba74; /* lighter orange */
+  --gradient-pink-200: #fbcfe8; /* light pink edge */
+}
+
+/* Light Radial gradient - reusable for buttons */
+.bg-gradient-light-radial {
+  background: 
+    linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%),
+    radial-gradient(240.04% 148.54% at 103.55% -72.22%, var(--gradient-blue-solid) 0%, var(--gradient-blue-dark) 100%),
+    radial-gradient(134.14% 157.77% at 0% 109.89%, var(--gradient-purple-solid) 0%, var(--gradient-purple-dark) 100%),
+    radial-gradient(68.33% 60.58% at 29.1% 2.82%, var(--gradient-cream-light) 0%, var(--gradient-cream-dark) 100%),
+    radial-gradient(101.21% 263.87% at 61.61% -127.72%, var(--gradient-yellow-solid) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(63.87% 49.81% at 44.34% 0%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    radial-gradient(30.47% 47.14% at 69.48% 43.82%, var(--gradient-yellow-light) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(51.92% 70.37% at 78.81% 87.51%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    var(--gradient-orange-base);
+}
+
+/* Main gradient background - reusable for buttons and other elements */
+.bg-gradient-main {
+  background: 
+    linear-gradient(0deg, var(--gradient-orange-base), var(--gradient-orange-base)),
+    radial-gradient(56.01% 42.6% at 78.81% 87.51%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    radial-gradient(43.09% 24.18% at 69.48% 43.82%, var(--gradient-yellow-light) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(61.54% 44.91% at 44.34% 0%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    radial-gradient(84.01% 263.62% at 61.61% -127.72%, var(--gradient-yellow-solid) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(63.96% 50.79% at 29.1% 2.82%, var(--gradient-cream-light) 0%, var(--gradient-cream-dark) 100%),
+    radial-gradient(39.97% 152.62% at 0% 109.89%, var(--gradient-purple-solid) 0%, var(--gradient-purple-dark) 100%),
+    radial-gradient(59.22% 232.62% at 103.55% -72.22%, var(--gradient-blue-solid) 0%, var(--gradient-blue-dark) 100%),
+    linear-gradient(0deg, var(--gradient-white-overlay-light), var(--gradient-white-overlay-light));
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-work-sans: var(--font-work-sans);
+  --font-zodiak: 'Zodiak', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-work-sans), system-ui, sans-serif;
+}
+
+/* Global gradient background - Rectangle 82 */
+.gradient-bg-rectangle82 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+  background: 
+    radial-gradient(38.75% 42.03% at 100% 57.94%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    radial-gradient(37.01% 49.74% at 83.92% 39.57%, var(--gradient-yellow-light) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(34.72% 23.13% at -2.47% 66.92%, var(--gradient-yellow-solid) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(24.71% 32.72% at 28.47% 3.6%, var(--gradient-cream-light) 0%, var(--gradient-cream-dark) 100%),
+    radial-gradient(23.58% 24.19% at 5.07% 58.74%, var(--gradient-purple-solid) 0%, var(--gradient-purple-dark) 100%),
+    radial-gradient(49.52% 35% at -3.92% 52.32%, var(--gradient-blue-solid) 0%, var(--gradient-blue-dark) 100%);
+}
+
+/* Global gradient background - Rectangle 81 */
+.gradient-bg-rectangle81 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background: 
+    radial-gradient(56.01% 42.6% at 78.81% 87.51%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    radial-gradient(43.09% 24.18% at 69.48% 43.82%, var(--gradient-yellow-light) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(61.54% 44.91% at 44.34% 0%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    radial-gradient(64.09% 199.16% at 61.61% -127.72%, var(--gradient-yellow-solid) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(67.39% 58.16% at 48.43% -4.55%, var(--gradient-cream-light) 0%, var(--gradient-cream-dark) 100%),
+    radial-gradient(54.5% 48.7% at 53.06% 5.96%, var(--gradient-purple-solid) 0%, var(--gradient-purple-dark) 100%),
+    radial-gradient(50.45% 172.9% at 90.65% -37.17%, var(--gradient-blue-solid) 0%, var(--gradient-blue-dark) 100%),
+    linear-gradient(0deg, var(--gradient-white-overlay-medium), var(--gradient-white-overlay-medium));
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Radial gradient for microphone icon */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--gradient-orange-400) 0%, var(--gradient-orange-300) 50%, var(--gradient-pink-200) 100%);
+}
