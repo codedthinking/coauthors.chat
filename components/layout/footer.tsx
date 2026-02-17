@@ -1,24 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { BrandMark } from "@/components/ui/brand-mark";
 
 export function Footer() {
   return (
-    <footer className="w-full h-[141px] bg-transparent border-t border-gray-200">
-      <div className="max-w-[1440px] mx-auto h-full px-[35px] py-11 flex items-center justify-between gap-3">
+    <footer className="w-full h-[141px] bg-[var(--footer-bg)] border-t border-gray-200">
+      <div className="h-full px-8 flex items-center justify-between gap-2.5">
         {/* Left side - Logo and description */}
-        <div className="flex items-start gap-4">
-          <div className="flex flex-col">
-            <div className="text-lg font-bold text-gray-900">coauthors</div>
-            <div className="text-xs text-gray-500">by Bantae</div>
-          </div>
-          <p className="text-sm text-gray-600 max-w-md">
+        <div className="flex items-start gap-16 text-[var(--footer-text)]">
+          <BrandMark variant="footer" />
+          <p className="text-sm max-w-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, erat sit amet condimentum vulputate, ex libero placerat.
           </p>
         </div>
 
         {/* Right side - Links */}
-        <div className="flex items-center gap-6 text-sm text-gray-600">
+        <div className="flex items-center gap-6 text-sm text-[var(--footer-text)]">
           <Link href="/privacy" className="hover:text-gray-900 transition-colors">
             Privacy policy
           </Link>

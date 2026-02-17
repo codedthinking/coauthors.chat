@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { FormInput } from "@/components/ui/form-input";
+import { PrimaryButton } from "@/components/ui/primary-button";
 
 export function JoinRoomForm() {
   return (
@@ -16,12 +18,11 @@ export function JoinRoomForm() {
         <FormInput type="email" placeholder="allansmith@university.edu" />
 
         {/* Primary action button */}
-        <button
-          type="submit"
-          className="h-[46px] w-full min-w-0 cursor-pointer rounded-full bg-gradient-light-radial font-work-sans text-base font-bold leading-[22px] tracking-[-0.7%] text-[#171717] transition-opacity hover:opacity-90"
-        >
-          Join room
-        </button>
+        <Link href="https://coautho.rs/" className="w-full max-w-[380px]">
+          <PrimaryButton type="button" className="w-full">
+            Join room
+          </PrimaryButton>
+        </Link>
       </form>
     </div>
   );

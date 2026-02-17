@@ -39,7 +39,7 @@ export function Hero() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mt-4">
               <Link
-                href="/chat"
+                href="https://coautho.rs/"
                 className="px-6 py-2.5 rounded-[1234px] bg-white text-gray-900 font-semibold text-sm flex items-center justify-center gap-3 hover:opacity-90 transition-opacity"
               >
                 Start chatting

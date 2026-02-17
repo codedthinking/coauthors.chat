@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --footer-bg: #F8FAFC;
+  --footer-text: #94A3B8;
   
   /* Gradient colors - reusable */
   --gradient-orange-light: rgba(252, 166, 134, 0.3);

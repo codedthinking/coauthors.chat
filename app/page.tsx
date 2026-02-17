@@ -16,8 +16,8 @@ export default function Home() {
         <FeaturesSection />
         <CommandsSection />
         <SignupSection />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
