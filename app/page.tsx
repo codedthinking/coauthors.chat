@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <GlobalBackground />
       <Header />
-      <main className="min-h-screen relative z-0">
+      <main className="min-h-screen relative z-0 flex flex-col gap-48">
         <Hero />
         <FeaturesSection />
         <CommandsSection />
