@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Label } from "@/components/ui/label";
+import { RoomPreview } from "@/components/room-preview/room-preview";
 
 export function Hero() {
   return (
@@ -53,9 +53,9 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right side - placeholder frame */}
-          <div className="w-full max-w-[700px] h-[494px] bg-white rounded-lg shadow-lg mx-auto lg:mx-0">
-            {/* This will be replaced with the actual chat room view component */}
+          {/* Right side - Room preview */}
+          <div className="w-full max-w-[900px] mx-auto lg:mx-0">
+            <RoomPreview />
           </div>
         </div>
       </div>

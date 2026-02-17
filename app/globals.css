@@ -31,6 +31,73 @@
   --gradient-pink-200: #fbcfe8; /* light pink edge */
 }
 
+/* Room preview styles (from coauthors-dev) */
+.conversation-system-msg {
+  color: #C6C4C9;
+  text-align: center;
+  font-family: var(--font-work-sans), "Work Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.28px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.conversation-bubble {
+  border-radius: 24px;
+  background: #FFD7C9;
+}
+
+.conversation-bubble-other {
+  border-radius: 24px;
+  background: #F5F5F5;
+}
+
+/* Room preview action buttons (from coauthors-dev) */
+.room-action-button {
+  border-radius: 4px;
+  border: 0;
+  background: transparent;
+  color: var(--room-action-text, #4A4652);
+}
+
+.room-action-icon-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: var(--Light-Radial, #FDE7DA);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.room-action-icon-box svg {
+  width: 12px;
+  height: 12px;
+}
+
+.room-control-separator {
+  width: 1px;
+  height: 1.25rem;
+  background: #CBD5E1;
+  flex-shrink: 0;
+}
+
+.bug-report-link {
+  color: #FF8257;
+  font-family: var(--font-work-sans), "Work Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.06px;
+  text-decoration-line: underline;
+}
+
 /* Light Radial gradient - reusable for buttons */
 .bg-gradient-light-radial {
   background: 
