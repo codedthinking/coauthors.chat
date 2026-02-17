@@ -9,10 +9,14 @@ export function FeaturesSection() {
       <div className="max-w-[1440px] mx-auto px-[35px]">
         <div className="grid lg:grid-cols-2 gap-48 items-start">
           {/* Left side - Chat layout */}
-          <ChatLayout />
+          <div className="ml-[49px]">
+            <ChatLayout />
+          </div>
 
           {/* Right side - Real-time transcript */}
-          <TranscriptInfo />
+          <div className="ml-[49px]">
+            <TranscriptInfo />
+          </div>
         </div>
       </div>
     </section>

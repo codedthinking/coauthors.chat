@@ -10,10 +10,14 @@ export function SignupSection() {
       <div className="max-w-[1440px] mx-auto px-[35px]">
         <div className="grid lg:grid-cols-2 gap-48 items-start mb-16">
           {/* Left side - Join room form */}
-          <JoinRoomForm />
+          <div className="ml-[49px]">
+            <JoinRoomForm />
+          </div>
 
           {/* Right side - Closed beta info */}
-          <BetaInfo />
+          <div className="ml-[49px]">
+            <BetaInfo />
+          </div>
         </div>
 
         {/* Bottom CTA section */}

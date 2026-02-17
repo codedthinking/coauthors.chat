@@ -10,9 +10,6 @@ export function ChatLayout() {
         {/* Header with name and badge */}
         <div className="flex items-center gap-2">
           <div className="font-semibold text-lg text-gray-900">Anna</div>
-          <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-            <span className="text-xs font-bold text-white">D</span>
-          </div>
         </div>
         
         {/* First speech bubble - light grey, narrow width */}
