@@ -22,12 +22,12 @@ export function ChatLayout() {
 
         {/* Microphone icon - positioned absolute at top-right corner, center on edge */}
         <div 
-          className="absolute -top-[58.5px] -right-[58.5px] w-[117px] h-[117px] rounded-full border-[10px] border-[#FFD7C9] flex items-center justify-center"
+          className="absolute -top-[29px] -right-[29px] sm:-top-[44px] sm:-right-[44px] lg:-top-[58.5px] lg:-right-[58.5px] w-[58px] h-[58px] sm:w-[88px] sm:h-[88px] lg:w-[117px] lg:h-[117px] rounded-full border-[5px] sm:border-[8px] lg:border-[10px] border-[#FFD7C9] flex items-center justify-center"
           style={{
             background: '#F79C7D'
           }}
         >
-          <Mic className="w-[46px] h-[46px] text-[#2C223B]" />
+          <Mic className="w-[23px] h-[23px] sm:w-[35px] sm:h-[35px] lg:w-[46px] lg:h-[46px] text-[#2C223B]" />
         </div>
       </div>
     </div>
