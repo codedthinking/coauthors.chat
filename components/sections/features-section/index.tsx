@@ -5,7 +5,7 @@ import { TranscriptInfo } from "./transcript-info";
 
 export function FeaturesSection() {
   return (
-    <section className="w-full bg-transparent pt-0 pb-8 sm:pt-1 sm:pb-12 lg:py-16">
+    <section className="w-full bg-transparent pt-12 pb-8 sm:pt-1 sm:pb-12 lg:py-16">
       <div className="max-w-[1440px] mx-auto px-[35px]">
         <div className="grid lg:grid-cols-2 gap-16 sm:gap-20 lg:gap-48 items-start justify-items-center lg:justify-items-start">
           {/* Left side - Chat layout */}

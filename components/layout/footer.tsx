@@ -6,7 +6,7 @@ import { BrandMark } from "@/components/ui/brand-mark";
 export function Footer() {
   return (
     <footer className="w-full bg-[var(--footer-bg)] border-t border-gray-200">
-      <div className="min-h-[141px] w-full max-w-[1440px] mx-auto px-4 sm:px-8 py-8 sm:py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-2.5">
+      <div className="h-full flex items-center justify-between gap-2.5 min-h-[141px] mx-auto px-4 sm:px-8 py-8 sm:py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-2.5">
         {/* Left side - Logo and description */}
         <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-16 text-[var(--footer-text)]">
           <BrandMark variant="footer" />

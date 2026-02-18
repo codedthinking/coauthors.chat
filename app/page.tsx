@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/hero";
 import { FeaturesSection } from "@/components/sections/features-section";
 import { CommandsSection } from "@/components/sections/commands-section";
 import { SignupSection } from "@/components/sections/signup-section";
+import { HeroBackground } from "@/components/layout/hero-background";
 
 export default function Home() {
   return (
@@ -12,8 +13,12 @@ export default function Home() {
       <GlobalBackground />
       <Header />
       <main className="min-h-screen relative z-0 flex flex-col gap-8 sm:gap-12 lg:gap-32">
-        <Hero />
-        <FeaturesSection />
+        {/* Hero and Features wrapper with background */}
+        <div className="relative">
+          <HeroBackground />
+          <Hero />
+          <FeaturesSection />
+        </div>
         <CommandsSection />
         <SignupSection />
       </main>

@@ -7,8 +7,8 @@ import { RoomPreview } from "@/components/room-preview/room-preview";
 export function Hero() {
   return (
     <section className="w-full bg-transparent relative overflow-hidden">
-      <div className="mx-auto px-[35px] pt-16 pb-4 sm:pt-20 sm:pb-6 lg:pt-24 lg:pb-48">
-        <div className="grid lg:grid-cols-2 gap-16 sm:gap-12 items-center">
+      <div className="mx-auto px-[35px] pt-16 pb-8 sm:pt-20 sm:pb-6 lg:pt-24 lg:pb-48">
+        <div className="grid lg:grid-cols-2 gap-24 sm:gap-12 items-center">
           {/* Left content */}
           <div className="flex flex-col gap-6 items-start lg:-translate-y-[30px]">
             {/* Launching closed beta badge */}
