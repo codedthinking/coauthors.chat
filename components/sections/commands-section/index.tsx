@@ -1,5 +1,3 @@
-"use client";
-
 import { CommandsInfo } from "./commands-info";
 import { CommandsButtons } from "./commands-buttons";
 

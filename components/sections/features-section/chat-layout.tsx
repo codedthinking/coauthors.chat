@@ -1,5 +1,3 @@
-"use client";
-
 import { Mic } from "lucide-react";
 
 export function ChatLayout() {

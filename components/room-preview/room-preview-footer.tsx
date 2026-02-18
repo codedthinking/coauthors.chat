@@ -1,5 +1,3 @@
-"use client";
-
 export function RoomPreviewFooter() {
   return (
     <div className="flex flex-col items-center gap-0.5 bg-white px-4 sm:px-5 lg:px-6 pt-2 sm:pt-3 lg:pt-4 pb-2 sm:pb-3 lg:pb-4">

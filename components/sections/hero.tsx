@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
 import { RoomPreview } from "@/components/room-preview/room-preview";

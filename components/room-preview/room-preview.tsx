@@ -1,5 +1,3 @@
-"use client";
-
 type ChatMessage =
   | { kind: "system"; text: string }
   | { kind: "user"; speaker: string; text: string; own?: boolean };

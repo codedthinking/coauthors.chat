@@ -1,5 +1,3 @@
-"use client";
-
 import { JoinRoomForm } from "./join-room-form";
 import { BetaInfo } from "./beta-info";
 import { CTASection } from "./cta-section";

@@ -1,5 +1,3 @@
-"use client";
-
 import { ChatLayout } from "./chat-layout";
 import { TranscriptInfo } from "./transcript-info";
 

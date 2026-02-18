@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { FormInput } from "@/components/ui/form-input";
 import { PrimaryButton } from "@/components/ui/primary-button";
@@ -7,10 +5,7 @@ import { PrimaryButton } from "@/components/ui/primary-button";
 export function JoinRoomForm() {
   return (
     <div className="w-full max-w-[411px] lg:max-w-[460px] lg:w-[460px] rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        className="flex w-full flex-col items-center space-y-3"
-      >
+      <div className="flex w-full flex-col items-center space-y-3">
         {/* Name input */}
         <FormInput type="text" placeholder="Allan" />
 
@@ -23,7 +18,7 @@ export function JoinRoomForm() {
             Join room
           </PrimaryButton>
         </Link>
-      </form>
+      </div>
     </div>
   );
 }
