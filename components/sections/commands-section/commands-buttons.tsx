@@ -31,19 +31,19 @@ function CommandButton({
   className?: string;
 }) {
   return (
-    <button
+      <button
       className={[
-        "inline-flex items-center gap-3 rounded-lg border border-[#D7E1EA] bg-white px-4 py-3",
+        "inline-flex items-center gap-2 sm:gap-3 rounded-lg border border-[#D7E1EA] bg-white px-3 py-2.5 sm:px-4 sm:py-3",
         "shadow-[0_4px_8px_-2px_rgba(23,23,23,0.10),_0_2px_4px_-2px_rgba(23,23,23,0.06)]",
-        "text-[21px] font-normal text-[#2C223B]",
+        "text-base sm:text-lg lg:text-[21px] font-normal text-[#2C223B]",
         "transition-transform hover:-translate-y-[1px] active:translate-y-0",
         className ?? "",
       ].join(" ")}
     >
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-[#C5ADEB] via-[#FCCB85] to-[#F79C7D] text-[#2C223B]">
+      <span className="grid h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 place-items-center rounded-lg bg-gradient-to-br from-[#C5ADEB] via-[#FCCB85] to-[#F79C7D] text-[#2C223B] shrink-0">
         {icon}
       </span>
-      <span className="font-work-sans font-normal">{label}</span>
+      <span className="font-work-sans font-normal text-sm sm:text-base lg:text-[21px]">{label}</span>
     </button>
   );
 }
