@@ -22,7 +22,7 @@ export function RoomPreviewControls() {
   const [isMicClicked, setIsMicClicked] = useState(false);
 
   return (
-    <div className="border-t border-gray-200 bg-white px-4 sm:px-5 lg:px-6 pt-2 sm:pt-3 lg:pt-4 pb-2 sm:pb-2.5 lg:pb-3">
+    <div className="border-t border-gray-200 bg-white px-4 sm:px-5 lg:px-6 pt-6 sm:pt-4 lg:pt-4 pb-6 sm:pb-3 lg:pb-3">
       <div className="flex items-center justify-center gap-10 flex-wrap">
         {/* Mute button (static, unmuted) */}
         <button

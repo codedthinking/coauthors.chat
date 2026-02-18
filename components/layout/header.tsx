@@ -12,10 +12,10 @@ export function Header() {
         {/* Right side button */}
         <Link
           href="https://coautho.rs/"
-          className="h-[42px] px-6 py-2.5 rounded-[1234px] bg-gradient-light-radial text-gray-800 font-semibold text-sm flex items-center gap-3 hover:opacity-90 transition-opacity"
+          className="h-[42px] px-4 sm:px-6 py-2.5 rounded-[1234px] bg-gradient-light-radial text-gray-800 font-semibold text-xs sm:text-sm flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity"
         >
           Start chatting
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
         </Link>
       </div>
     </header>
