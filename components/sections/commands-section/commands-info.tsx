@@ -9,7 +9,7 @@ export function CommandsInfo() {
       <Label>Label</Label>
 
       {/* Heading */}
-      <h2 className="text-[36px] leading-[119%] tracking-[-1.8px] text-[#2C223B]">
+      <h2 className="text-[36px] leading-[119%] tracking-[-1.8px] text-[#2C223B] text-center lg:text-left">
         <span
           className="font-zodiak italic font-normal"
         >
@@ -22,7 +22,7 @@ export function CommandsInfo() {
       </h2>
 
       {/* Description */}
-      <p className="font-work-sans font-normal text-sm leading-[120%] tracking-[-0.02em] text-gray-600 max-w-md">
+      <p className="font-work-sans font-normal text-sm leading-[120%] tracking-[-0.02em] text-gray-600 max-w-md text-center lg:text-left">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida,
         erat sit amet condimentum vulputate, ex libero placerat.
       </p>

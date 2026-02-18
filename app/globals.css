@@ -41,8 +41,6 @@
   font-weight: 400;
   line-height: 140%;
   letter-spacing: -0.28px;
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
 
 .conversation-bubble {
@@ -215,3 +213,5 @@ html {
 .bg-gradient-radial {
   background: radial-gradient(circle, var(--gradient-orange-400) 0%, var(--gradient-orange-300) 50%, var(--gradient-pink-200) 100%);
 }
+
+/* (intentionally left blank) */

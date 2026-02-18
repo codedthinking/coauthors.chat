@@ -6,7 +6,7 @@ export function ChatLayout() {
   return (
     <div className="relative">
       {/* Chat card */}
-      <div className="w-[411px] rounded-lg border border-gray-200 bg-white p-8 flex flex-col gap-4 shadow-lg relative">
+      <div className="w-full max-w-[411px] rounded-lg border border-gray-200 bg-white p-8 flex flex-col gap-4 shadow-lg relative">
         {/* Header with name and badge */}
         <div className="flex items-center gap-2">
           <div className="font-semibold text-lg text-gray-900">Anna</div>

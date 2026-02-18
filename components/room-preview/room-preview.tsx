@@ -42,8 +42,8 @@ import { RoomPreviewControls } from "./room-preview-controls";
 
 export function RoomPreview() {
   return (
-    <div className="w-full flex items-start justify-center overflow-hidden">
-      <div className="origin-top scale-[0.8] w-[1200px] rounded-lg border border-gray-200 bg-white shadow-lg overflow-hidden flex flex-col">
+    <div className="w-full">
+      <div className="w-full mx-auto max-w-[900px] rounded-none sm:rounded-lg border border-gray-200 bg-white shadow-lg overflow-hidden flex flex-col">
         {/* Header bar */}
         <div className="flex h-14 w-full items-center justify-between border-b border-gray-200 bg-white px-6">
           <div className="flex items-center gap-3">
@@ -66,11 +66,11 @@ export function RoomPreview() {
         </div>
 
         {/* Conversation body */}
-        <div className="flex-1 min-h-0 overflow-y-auto bg-white px-8 pt-6 pb-2">
+        <div className="flex-1 min-h-0 overflow-y-auto bg-white px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 lg:pt-6 pb-1 sm:pb-1.5 lg:pb-2">
           {MESSAGES.map((msg, idx) => {
             if (msg.kind === "system") {
               return (
-                <p key={idx} className="conversation-system-msg">
+                <p key={idx} className="conversation-system-msg mt-3 sm:mt-4 lg:mt-6 mb-3 sm:mb-4 lg:mb-6">
                   {msg.text}
                 </p>
               );
@@ -81,14 +81,14 @@ export function RoomPreview() {
               : "conversation-bubble-other";
 
             return (
-              <div key={idx} className="mb-4">
-                <div className="mb-1">
+              <div key={idx} className="mb-2 sm:mb-3 lg:mb-4">
+                <div className="mb-0.5 sm:mb-1">
                   <span className="text-sm font-semibold text-[#171717]">
                     {msg.speaker}
                   </span>
                 </div>
                 <div
-                  className={`${bubbleClass} inline-block px-4 py-2 max-w-[560px]`}
+                  className={`${bubbleClass} inline-block px-4 py-2 max-w-full sm:max-w-[560px] break-words`}
                 >
                   <p className="font-work-sans text-sm leading-[140%] text-[#171717]">
                     {msg.text}

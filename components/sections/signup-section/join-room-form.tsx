@@ -6,7 +6,7 @@ import { PrimaryButton } from "@/components/ui/primary-button";
 
 export function JoinRoomForm() {
   return (
-    <div className="w-[411px] rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
+    <div className="w-full max-w-[411px] lg:max-w-[460px] lg:w-[460px] rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
       <form
         onSubmit={(e) => e.preventDefault()}
         className="flex w-full flex-col items-center space-y-3"

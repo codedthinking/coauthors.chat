@@ -10,7 +10,7 @@ export function CTASection() {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="w-full min-h-[452px] px-[135px] py-[120px] flex flex-col items-center gap-[178px]">
+    <div className="w-full min-h-[452px] px-4 sm:px-8 lg:px-[135px] py-16 sm:py-20 lg:py-[120px] flex flex-col items-center gap-12 sm:gap-16 lg:gap-[178px]">
       <div className="flex w-full max-w-[540px] flex-col items-center gap-6 text-center">
         {/* Heading */}
         <h2 className="font-work-sans font-normal text-[36px] leading-[119%] tracking-[-0.05em] text-gray-900">

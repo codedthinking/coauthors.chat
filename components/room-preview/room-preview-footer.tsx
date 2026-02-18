@@ -2,7 +2,7 @@
 
 export function RoomPreviewFooter() {
   return (
-    <div className="flex flex-col items-center gap-0.5 bg-white px-6 pt-4 pb-4">
+    <div className="flex flex-col items-center gap-0.5 bg-white px-4 sm:px-5 lg:px-6 pt-2 sm:pt-3 lg:pt-4 pb-2 sm:pb-3 lg:pb-4">
       <p className="font-work-sans text-center text-sm font-normal leading-5 text-[var(--footer-text,#94A3B8)]">
         Your anonymized chat text helps improve the app
       </p>
