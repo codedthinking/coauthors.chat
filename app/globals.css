@@ -226,12 +226,16 @@ html {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(38.75% 42.03% at 100% 57.94%, rgba(169, 201, 217, 0.3) 0%, rgba(169, 201, 217, 0) 100%),
-    radial-gradient(23.58% 24.19% at 5.07% 58.74%, rgba(197, 173, 235, 0.3) 0%, rgba(197, 173, 235, 0) 100%),
-    radial-gradient(24.71% 32.72% at 28.47% 3.6%, rgba(249, 244, 238, 0.3) 0%, rgba(249, 244, 238, 0) 100%),
-    radial-gradient(37.01% 49.74% at 83.92% 39.57%, rgba(252, 166, 134, 0.3) 0%, rgba(245, 144, 117, 0) 100%),
-    radial-gradient(34.72% 23.13% at -2.47% 66.92%, rgba(252, 203, 133, 0.3) 0%, rgba(252, 203, 133, 0) 100%),
-    radial-gradient(61.54% 44.91% at 44.34% 0%, rgba(252, 203, 133, 0.3) 0%, rgba(252, 203, 133, 0) 100%);
+    /* Right side stays lighter */
+    radial-gradient(38.75% 42.03% at 100% 57.94%, rgba(169, 201, 217, 0.22) 0%, rgba(169, 201, 217, 0) 100%),
+    radial-gradient(37.01% 49.74% at 83.92% 39.57%, rgba(252, 166, 134, 0.18) 0%, rgba(245, 144, 117, 0) 100%),
+    radial-gradient(61.54% 44.91% at 44.34% 0%, rgba(252, 203, 133, 0.12) 0%, rgba(252, 203, 133, 0) 100%),
+    radial-gradient(34.72% 23.13% at -2.47% 66.92%, rgba(252, 203, 133, 0.18) 0%, rgba(252, 203, 133, 0) 100%),
+
+    /* Left side (where the hero text sits) gets darker */
+    radial-gradient(23.58% 24.19% at 5.07% 58.74%, rgba(197, 173, 235, 0.22) 0%, rgba(197, 173, 235, 0) 100%),
+    radial-gradient(24.71% 32.72% at 28.47% 3.6%, rgba(249, 244, 238, 0.42) 0%, rgba(249, 244, 238, 0) 100%),
+    radial-gradient(34% 44% at 25% 35%, rgba(249, 244, 238, 0.45) 0%, rgba(249, 244, 238, 0) 100%);
 }
 
 .coauthors-cta-lower-bg {
@@ -240,6 +244,8 @@ html {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(49.52% 35% at -3.92% 52.32%, rgba(169, 201, 217, 0.2) 0%, rgba(169, 201, 217, 0) 100%),
-    radial-gradient(23.58% 24.19% at 5.07% 58.74%, rgba(197, 173, 235, 0.2) 0%, rgba(197, 173, 235, 0) 100%);
+    /* CTA: focus the center a bit more, keep edges lighter */
+    radial-gradient(49.52% 35% at -3.92% 52.32%, rgba(169, 201, 217, 0.15) 0%, rgba(169, 201, 217, 0) 100%),
+    radial-gradient(23.58% 24.19% at 5.07% 58.74%, rgba(197, 173, 235, 0.12) 0%, rgba(197, 173, 235, 0) 100%),
+    radial-gradient(40% 40% at 50% 35%, rgba(249, 244, 238, 0.25) 0%, rgba(249, 244, 238, 0) 100%);
 }

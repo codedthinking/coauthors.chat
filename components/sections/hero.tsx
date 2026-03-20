@@ -10,7 +10,7 @@ export function Hero() {
           {/* Left content */}
           <div className="flex flex-col gap-6 items-start lg:-translate-y-[30px]">
             {/* Launching closed beta badge */}
-            <Label>Launching closed beta</Label>
+            <Label variant="primary">Launching closed beta</Label>
 
             {/* Main headline */}
             <h1 className="font-work-sans font-normal text-[48px] leading-[119%] tracking-[-0.05em] text-gray-900 text-center sm:text-left">
