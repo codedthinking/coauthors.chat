@@ -4,7 +4,7 @@ import { BrandMark } from "@/components/ui/brand-mark";
 
 export function Header() {
   return (
-    <header className="w-full h-20 border-b border-gray-200 bg-white">
+    <header className="w-full h-20 bg-transparent border-b-0">
       <div className="h-full px-8 flex items-center justify-between gap-2.5">
         {/* Logo */}
         <BrandMark />
@@ -14,7 +14,7 @@ export function Header() {
           href="https://coautho.rs/"
           className="h-[42px] px-4 sm:px-6 py-2.5 rounded-[1234px] bg-gradient-light-radial text-gray-800 font-semibold text-xs sm:text-sm flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity"
         >
-          Start chatting
+          Start talking
           <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
         </Link>
       </div>

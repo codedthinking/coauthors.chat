@@ -1,24 +1,22 @@
-import { GlobalBackground } from "@/components/layout/global-background";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { FeaturesSection } from "@/components/sections/features-section";
 import { CommandsSection } from "@/components/sections/commands-section";
 import { SignupSection } from "@/components/sections/signup-section";
-import { HeroBackground } from "@/components/layout/hero-background";
 
 export default function Home() {
   return (
     <>
-      <GlobalBackground />
-      <Header />
+      {/* Upper background only (stops after Hero) */}
+      <div className="relative isolate rounded-[20px]">
+        <div className="coauthors-hero-upper-bg rounded-[20px]" aria-hidden="true" />
+        <Header />
+        <Hero />
+      </div>
+
       <main className="min-h-screen relative z-0 flex flex-col gap-8 sm:gap-12 lg:gap-32">
-        {/* Hero and Features wrapper with background */}
-        <div className="relative">
-          <HeroBackground />
-          <Hero />
-          <FeaturesSection />
-        </div>
+        <FeaturesSection />
         <CommandsSection />
         <SignupSection />
       </main>

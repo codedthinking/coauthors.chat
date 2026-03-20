@@ -60,7 +60,7 @@ export default function RootLayout({
       <body
         className={`${workSans.variable} antialiased`}
       >
-        {children}
+        <div className="p-8">{children}</div>
       </body>
     </html>
   );
