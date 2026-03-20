@@ -21,6 +21,18 @@
   --gradient-white-overlay-light: rgba(255, 255, 255, 0.4);
   --gradient-white-overlay-medium: rgba(255, 255, 255, 0.7);
   --gradient-orange-base: #F79C7D;
+
+  /* coauthors-dev compatible light radial background */
+  --Light-Radial: 
+    linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%),
+    radial-gradient(240.04% 148.54% at 103.55% -72.22%, var(--gradient-blue-solid) 0%, var(--gradient-blue-dark) 100%),
+    radial-gradient(134.14% 157.77% at 0% 109.89%, var(--gradient-purple-solid) 0%, var(--gradient-purple-dark) 100%),
+    radial-gradient(68.33% 60.58% at 29.1% 2.82%, var(--gradient-cream-light) 0%, var(--gradient-cream-dark) 100%),
+    radial-gradient(101.21% 263.87% at 61.61% -127.72%, var(--gradient-yellow-solid) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(63.87% 49.81% at 44.34% 0%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    radial-gradient(30.47% 47.14% at 69.48% 43.82%, var(--gradient-yellow-light) 0%, var(--gradient-yellow-dark) 100%),
+    radial-gradient(51.92% 70.37% at 78.81% 87.51%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
+    var(--gradient-orange-base);
   
   /* Purple color for H1 italic */
   --purple-80: #2C223B;
@@ -29,6 +41,12 @@
   --gradient-orange-400: #fb923c; /* reddish-orange center */
   --gradient-orange-300: #fdba74; /* lighter orange */
   --gradient-pink-200: #fbcfe8; /* light pink edge */
+}
+
+/* coauthors.io/Misc/Menu-S-Regular – header BANTAE-UI label */
+.header-bantae-label {
+  font-family: var(--font-work-sans), "Work Sans", sans-serif;
+  letter-spacing: -0.06px;
 }
 
 /* Room preview styles (from coauthors-dev) */
@@ -108,6 +126,24 @@
     radial-gradient(30.47% 47.14% at 69.48% 43.82%, var(--gradient-yellow-light) 0%, var(--gradient-yellow-dark) 100%),
     radial-gradient(51.92% 70.37% at 78.81% 87.51%, var(--gradient-orange-light) 0%, var(--gradient-orange-dark) 100%),
     var(--gradient-orange-base);
+}
+
+/* Primary button (ported from coauthors-dev) */
+.primary-button {
+  border-radius: 123px;
+  background: var(--Orange-rainbow, radial-gradient(240.04% 148.54% at 103.55% -72.22%, #A9C9D9 0%, rgba(169, 201, 217, 0.00) 100%),
+    radial-gradient(134.14% 157.77% at 0% 109.89%, #C5ADEB 0%, rgba(197, 173, 235, 0.00) 100%),
+    radial-gradient(68.33% 60.58% at 29.1% 2.82%, rgba(249, 244, 238, 0.30) 0%, rgba(249, 244, 238, 0.00) 100%),
+    radial-gradient(101.21% 263.87% at 61.61% -127.72%, #FCCB85 0%, rgba(252, 203, 133, 0.00) 100%),
+    radial-gradient(63.87% 49.81% at 44.34% 0%, rgba(252, 166, 134, 0.30) 0%, rgba(245, 144, 117, 0.00) 100%),
+    radial-gradient(30.47% 47.14% at 69.48% 43.82%, rgba(252, 203, 133, 0.30) 0%, rgba(252, 203, 133, 0.00) 100%),
+    radial-gradient(51.92% 70.37% at 78.81% 87.51%, rgba(252, 166, 134, 0.30) 0%, rgba(245, 144, 117, 0.00) 100%),
+    #F79C7D);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  box-shadow: 0px 4px 12px -2px rgba(23, 23, 23, 0.15), 0px 8px 16px -2px rgba(23, 23, 23, 0.1);
 }
 
 /* Main gradient background - reusable for buttons and other elements */

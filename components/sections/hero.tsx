@@ -1,11 +1,11 @@
-import Link from "next/link";
 import { Label } from "@/components/ui/label";
+import { CtaLink } from "@/components/ui/cta-link";
 import { RoomPreview } from "@/components/room-preview/room-preview";
 
 export function Hero() {
   return (
     <section className="w-full bg-transparent relative overflow-hidden">
-      <div className="mx-auto px-[35px] pt-16 pb-8 sm:pt-20 sm:pb-6 lg:pt-24 lg:pb-48">
+      <div className="mx-auto px-[52px] pt-16 pb-8 sm:pt-20 sm:pb-6 lg:pt-24 lg:pb-48">
         <div className="grid lg:grid-cols-2 gap-24 sm:gap-12 items-center">
           {/* Left content */}
           <div className="flex flex-col gap-6 items-start lg:-translate-y-[30px]">
@@ -36,18 +36,12 @@ export function Hero() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mt-4 self-center sm:self-start">
-              <Link
-                href="https://coautho.rs/"
-                className="px-6 py-2.5 rounded-[1234px] bg-white text-gray-900 font-semibold text-sm flex items-center justify-center gap-3 hover:opacity-90 transition-opacity"
-              >
-                Start chatting
-              </Link>
-              <Link
-                href="#more-info"
-                className="px-6 py-2.5 rounded-[1234px] border border-white/30 bg-white/30 backdrop-blur-[2px] text-gray-900 font-semibold text-sm flex items-center justify-center gap-3 hover:bg-white/40 transition-colors"
-              >
+              <CtaLink href="https://coautho.rs/" variant="white">
+                Start talking
+              </CtaLink>
+              <CtaLink href="#more-info" variant="transparent">
                 More information
-              </Link>
+              </CtaLink>
             </div>
           </div>
 

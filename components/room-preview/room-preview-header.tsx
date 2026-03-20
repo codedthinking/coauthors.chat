@@ -1,16 +1,15 @@
 export function RoomPreviewHeader() {
   return (
-    <div className="flex h-14 w-full items-center justify-between border-b border-gray-200 bg-white px-4 sm:px-6">
-      <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+    <div className="flex h-20 w-full items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
+      <div className="flex items-center gap-[16px] min-w-0 flex-1">
         <div className="h-3 w-3 rounded-full bg-[#22C55E] shrink-0" />
         <div
-          className="px-2 py-1 shrink-0"
+          className="px-2 py-1 rounded-[1234px] text-[12px] shrink-0"
           style={{
-            borderRadius: 1234,
-            background: "var(--Light-Radial, #FDE7DA)",
+            background: "var(--Light-Radial)",
           }}
         >
-          <span className="text-xs font-normal uppercase leading-4 text-[#2C223B] whitespace-nowrap">
+          <span className="header-bantae-label text-center text-[12px] font-normal uppercase leading-[16px] tracking-[-0.5%] text-[var(--Webapp-Purple-Purple-80,#2C223B)] whitespace-nowrap">
             BANTAE-UI
           </span>
         </div>

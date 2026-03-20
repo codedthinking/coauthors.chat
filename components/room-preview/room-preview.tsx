@@ -41,23 +41,28 @@ import { RoomPreviewHeader } from "./room-preview-header";
 import { RoomPreviewBody } from "./room-preview-body";
 
 export function RoomPreview() {
-  const cardStyle = {
+  const topCardStyle = {
     borderRadius: 20,
     background: "var(--webapp-gray-gray-0-white, #FFF)",
     boxShadow:
       "0 2.456px 4.913px -1.228px rgba(23, 23, 23, 0.10), 0 1.228px 2.456px -1.228px rgba(23, 23, 23, 0.06)",
   };
 
+  const bottomCardStyle = {
+    borderRadius: 20,
+    background: "var(--webapp-gray-gray-0-white, #FFF)",
+  };
+
   return (
-    <div className="w-full mx-auto max-w-[900px] flex flex-col gap-4">
+    <div className="w-full mx-auto max-w-[900px] flex flex-col gap-[20px]">
 
       {/* Bottom card: controls + room footer */}
-      <div className="overflow-hidden flex flex-col" style={cardStyle}>
+      <div className="overflow-hidden flex flex-col" style={bottomCardStyle}>
         <RoomPreviewControls />
         <RoomPreviewFooter />
       </div>
       {/* Top card: header + conversation body */}
-      <div className="overflow-hidden flex flex-col" style={cardStyle}>
+      <div className="overflow-hidden flex flex-col" style={topCardStyle}>
         <RoomPreviewHeader />
         <RoomPreviewBody messages={MESSAGES} />
       </div>

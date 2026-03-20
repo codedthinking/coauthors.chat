@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BrandMark } from "@/components/ui/brand-mark";
+import { CtaLink } from "@/components/ui/cta-link";
 
 export function Header() {
   return (
@@ -10,13 +10,10 @@ export function Header() {
         <BrandMark />
 
         {/* Right side button */}
-        <Link
-          href="https://coautho.rs/"
-          className="h-[42px] px-4 sm:px-6 py-2.5 rounded-[1234px] bg-gradient-light-radial text-gray-800 font-semibold text-xs sm:text-sm flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity"
-        >
+        <CtaLink href="https://coautho.rs/" variant="primary">
           Start talking
           <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-        </Link>
+        </CtaLink>
       </div>
     </header>
   );
