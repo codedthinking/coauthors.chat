@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CoauthorsWordmark } from "@/components/ui/coauthors-wordmark";
 
 type BrandMarkProps = {
   variant?: "header" | "footer";
@@ -7,19 +8,13 @@ type BrandMarkProps = {
 export function BrandMark({ variant = "header" }: BrandMarkProps) {
   return (
     <Link href="/" className="flex flex-col items-start">
-      <span
-        className={[
-          "font-zodiak font-normal text-[32px] leading-[100%] tracking-[-0.02em]",
-          variant === "footer" ? "text-[var(--footer-text)]" : "text-gray-800",
-        ].join(" ")}
-        style={{ fontFamily: "Zodiak, serif" }}
-      >
-        coauthors
+      <span className="text-[32px] leading-[100%]">
+        <CoauthorsWordmark variant={variant} />
       </span>
       <span
         className={[
-          "font-work-sans font-normal text-xs leading-4 tracking-[-0.005em]",
-          variant === "footer" ? "text-[var(--footer-text)]" : "text-gray-500",
+          "font-work-sans font-normal text-xs leading-4 tracking-[-0.005em] self-end -mt-[2px]",
+          "text-[var(--purple-80)]",
         ].join(" ")}
         style={{ fontFamily: "var(--font-work-sans), system-ui, sans-serif" }}
       >
