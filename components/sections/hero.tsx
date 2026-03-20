@@ -14,24 +14,26 @@ export function Hero() {
 
             {/* Main headline */}
             <h1 className="font-work-sans font-normal text-[48px] leading-[119%] tracking-[-0.05em] text-gray-900 text-center sm:text-left">
-              Just join the
-              <br />
-              conversation and{" "}
-              <span 
+              Make ideas happen <br /> through{" "}
+              <span
                 className="font-zodiak italic text-[48px] leading-[119%]"
-                style={{ 
-                  fontFamily: 'Zodiak, serif',
+                style={{
+                  fontFamily: "Zodiak, serif",
                   fontWeight: 540,
-                  color: '#2C223B'
+                  color: "#2C223B",
                 }}
               >
-                talk.
+                conversation
               </span>
             </h1>
 
             {/* Description */}
-            <p className="font-work-sans font-normal text-xl leading-[140%] tracking-[-0.05em] text-gray-700 max-w-lg text-center sm:text-left">
-              With coauthors.io there is no need for janky AI assistant, the conversation transcript is generated in real time.
+            <p className="font-work-sans font-normal text-xl leading-[140%] tracking-[-0.05em] text-gray-700 max-w-lg lg:max-w-[680px] text-center sm:text-left">
+              The magic of discovery is best channeled through discussion,<br /> 
+              <span className="font-work-sans text-[20px] italic font-normal leading-[140%] tracking-[-1px] text-[var(--Webapp-Purple-Purple-80,#2C223B)]">
+                coauthors
+              </span>{" "}
+              captures and remembers that.
             </p>
 
             {/* Buttons */}
