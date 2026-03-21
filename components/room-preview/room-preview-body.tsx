@@ -1,5 +1,9 @@
 import type { RoomPreviewChatMessage } from "@/shared/conversation";
-import { isSameSpeakerAsPrevious, needsBlockGapAbove } from "@/shared/conversation";
+import {
+  BubbleTextRow,
+  isSameSpeakerAsPrevious,
+  needsBlockGapAbove,
+} from "@/shared/conversation";
 
 export function RoomPreviewBody({
   messages,
@@ -47,9 +51,7 @@ export function RoomPreviewBody({
                 <div
                   className={`${bubbleClass} inline-block px-4 py-2 max-w-full sm:max-w-[560px] break-words`}
                 >
-                  <p className="font-work-sans text-sm leading-[140%] text-[#171717]">
-                    {msg.text}
-                  </p>
+                  <BubbleTextRow text={msg.text} showCaret={!!msg.own} />
                 </div>
               </div>
             </div>
@@ -66,9 +68,7 @@ export function RoomPreviewBody({
             <div
               className={`${bubbleClass} inline-block px-4 py-2 max-w-full sm:max-w-[560px] break-words`}
             >
-              <p className="font-work-sans text-sm leading-[140%] text-[#171717]">
-                {msg.text}
-              </p>
+              <BubbleTextRow text={msg.text} showCaret={!!msg.own} />
             </div>
           </div>
         );

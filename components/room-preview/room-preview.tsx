@@ -5,7 +5,7 @@ import { RoomPreviewFooter } from "./room-preview-footer";
 import { RoomPreviewHeader } from "./room-preview-header";
 
 /** Applied from the `lg` breakpoint via `--room-preview-desktop-scale` (see root `div`). */
-const ROOM_PREVIEW_DESKTOP_SCALE = 0.9;
+const ROOM_PREVIEW_DESKTOP_SCALE = 1;
 
 const MESSAGES: RoomPreviewChatMessage[] = [
   {
@@ -60,6 +60,7 @@ export function RoomPreview() {
       style={
         {
           "--room-preview-desktop-scale": ROOM_PREVIEW_DESKTOP_SCALE,
+          marginRight: 21,
         } as React.CSSProperties
       }
     >

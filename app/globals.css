@@ -55,11 +55,12 @@
   color: #C6C4C9;
   text-align: center;
   font-family: var(--font-work-sans), "Work Sans", sans-serif;
-  font-size: 14px;
+  /* Design size (before room preview lg: scale) */
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  letter-spacing: -0.28px;
+  letter-spacing: -0.24px;
 }
 
 .conversation-bubble {
