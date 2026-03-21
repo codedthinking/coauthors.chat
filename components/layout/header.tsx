@@ -4,8 +4,8 @@ import { CtaLink } from "@/components/ui/cta-link";
 
 export function Header() {
   return (
-    <header className="w-full h-20 bg-transparent border-b-0">
-      <div className="h-full px-8 flex items-center justify-between gap-2.5">
+    <header className="w-full bg-transparent border-b-0 pt-[36px]">
+      <div className="min-h-20 px-8 flex items-center justify-between gap-2.5">
         {/* Logo */}
         <BrandMark />
 
