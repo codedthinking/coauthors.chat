@@ -276,14 +276,16 @@ html {
     radial-gradient(34% 44% at 25% 35%, rgba(249, 244, 238, 0.45) 0%, rgba(249, 244, 238, 0) 100%);
 }
 
-.coauthors-cta-lower-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
+/* “Interested? Start talking!” — full-width band, same inset rhythm as hero inner (px in component) */
+.coauthors-cta-interested-section {
+  border-radius: 20px;
+  overflow: hidden;
   background:
-    /* CTA: focus the center a bit more, keep edges lighter */
-    radial-gradient(49.52% 35% at -3.92% 52.32%, rgba(169, 201, 217, 0.15) 0%, rgba(169, 201, 217, 0) 100%),
-    radial-gradient(23.58% 24.19% at 5.07% 58.74%, rgba(197, 173, 235, 0.12) 0%, rgba(197, 173, 235, 0) 100%),
-    radial-gradient(40% 40% at 50% 35%, rgba(249, 244, 238, 0.25) 0%, rgba(249, 244, 238, 0) 100%);
+    radial-gradient(60.64% 34.93% at -3.92% 52.32%, #a9c9d9 0%, rgba(169, 201, 217, 0) 100%),
+    radial-gradient(33.78% 22.6% at 5.07% 58.74%, #c5adeb 0%, rgba(197, 173, 235, 0) 100%),
+    radial-gradient(41.01% 28.79% at 28.47% 3.6%, rgba(249, 244, 238, 0.3) 0%, rgba(249, 244, 238, 0) 100%),
+    radial-gradient(26.59% 41.72% at -2.47% 66.92%, #fccb85 0%, rgba(252, 203, 133, 0) 100%),
+    radial-gradient(28.04% 62% at 83.92% 39.57%, rgba(252, 203, 133, 0.3) 0%, rgba(252, 203, 133, 0) 100%),
+    radial-gradient(43.43% 42% at 100% 57.94%, rgba(252, 166, 134, 0.3) 0%, rgba(245, 144, 117, 0) 100%),
+    #fcfcfc;
 }
