@@ -1,21 +1,21 @@
-# Komponens Újrahasznosítás - Megoldások
+# Component reuse — options
 
-Ha vannak már létező komponensek egy másik repoban (pl. chat room view, gombok, szövegek), és szeretnéd újrahasználni őket, itt vannak a legjobb megoldások:
+If you already have components in another repo (e.g. chat room view, buttons, copy) and want to reuse them, here are solid approaches:
 
-## 1. **Monorepo megoldás (Ajánlott) 🏆**
+## 1. **Monorepo (recommended)**
 
-A legjobb megoldás egy monorepo struktúra, ahol mindkét projekt ugyanabban a repoban van.
+The cleanest setup is a monorepo where both projects live in one repository.
 
-### Turborepo használata:
+### Using Turborepo:
 
 ```bash
-# Projekt struktúra:
+# Example layout:
 coauthors-monorepo/
 ├── apps/
-│   ├── landing-page/          # Ez a projekt
-│   └── main-app/              # A másik repo (chat room, stb.)
+│   ├── landing-page/          # This project
+│   └── main-app/              # The other app (chat room, etc.)
 ├── packages/
-│   └── shared-components/     # Közös komponensek
+│   └── shared-components/     # Shared components
 │       ├── src/
 │       │   ├── ChatRoom.tsx
 │       │   ├── Button.tsx
@@ -24,26 +24,26 @@ coauthors-monorepo/
 └── turbo.json
 ```
 
-**Előnyök:**
-- ✅ TypeScript típusok megosztva
-- ✅ Gyors build (Turborepo cache)
-- ✅ Könnyű importálás
-- ✅ Egy helyen van minden kód
+**Benefits:**
+- ✅ Shared TypeScript types
+- ✅ Fast builds (Turborepo cache)
+- ✅ Simple imports
+- ✅ Single place for shared code
 
-**Telepítés:**
+**Setup:**
 ```bash
 npm install -g turbo
 npx create-turbo@latest
 ```
 
-## 2. **Shared NPM Package**
+## 2. **Shared npm package**
 
-Ha a projektek külön repokban vannak, hozz létre egy shared package-et.
+If projects live in separate repos, publish (or consume) a shared package.
 
-### Lépések:
+### Steps:
 
-1. **Hozz létre egy új repot** `@coauthors/shared-components` néven
-2. **Package struktúra:**
+1. **Create a repo** e.g. `@coauthors/shared-components`
+2. **Package layout:**
 ```
 shared-components/
 ├── src/
@@ -67,7 +67,7 @@ shared-components/
 }
 ```
 
-4. **Használat a landing page-ben:**
+4. **Use on the landing page:**
 ```bash
 npm install @coauthors/shared-components
 ```
@@ -76,45 +76,45 @@ npm install @coauthors/shared-components
 import { ChatRoom, Button } from '@coauthors/shared-components';
 ```
 
-**Publikálás:**
-- Privát npm registry (GitHub Packages, npm private)
-- Vagy git URL: `npm install git+https://github.com/coauthors/shared-components.git`
+**Publishing:**
+- Private registry (GitHub Packages, npm private)
+- Or git URL: `npm install git+https://github.com/coauthors/shared-components.git`
 
-## 3. **Git Submodule**
+## 3. **Git submodule**
 
-Ha nem akarsz npm package-et, használhatod git submodule-t.
+If you don’t want an npm package, you can use a git submodule.
 
 ```bash
-# A landing page repoban:
+# In the landing page repo:
 git submodule add https://github.com/coauthors/shared-components.git packages/shared
 ```
 
-**Használat:**
+**Usage:**
 ```tsx
 import { ChatRoom } from '../packages/shared/src/ChatRoom';
 ```
 
-**Figyelem:** Nehezebb kezelni, de működik.
+**Note:** Harder to maintain, but it works.
 
-## 4. **Symlink megoldás (Development)**
+## 4. **Symlink (development)**
 
-Fejlesztés közben használhatsz symlinket:
+During local development you can use `npm link`:
 
 ```bash
-# A shared components repoban:
+# In the shared-components repo:
 cd /path/to/shared-components
 npm link
 
-# A landing page repoban:
+# In the landing page repo:
 cd /path/to/landing-page
 npm link @coauthors/shared-components
 ```
 
-## 5. **Példa: ChatRoom komponens újrahasznosítása**
+## 5. **Example: reusing a `ChatRoom` component**
 
-Tegyük fel, hogy van egy `ChatRoom` komponens a másik repoban:
+Suppose `ChatRoom` lives in the other repo.
 
-### Shared package-ben:
+### In the shared package:
 ```tsx
 // packages/shared-components/src/ChatRoom.tsx
 export function ChatRoom({ roomId }: { roomId: string }) {
@@ -126,7 +126,7 @@ export function ChatRoom({ roomId }: { roomId: string }) {
 }
 ```
 
-### Landing page-ben:
+### On the landing page:
 ```tsx
 // components/hero.tsx
 import { ChatRoom } from '@coauthors/shared-components';
@@ -143,17 +143,17 @@ export function Hero() {
 }
 ```
 
-## Ajánlás
+## Recommendation
 
-**Production projekthez:** Monorepo (Turborepo) vagy Shared NPM Package
+**Production:** Monorepo (Turborepo) or shared npm package
 
-**Gyors prototípushoz:** Git Submodule vagy Symlink
+**Quick prototype:** Git submodule or symlink
 
-## Következő lépések
+## Next steps
 
-1. Döntsd el, melyik megoldás illik a projektedhez
-2. Ha monorepo: telepítsd a Turborepo-t
-3. Ha shared package: hozd létre a package-et és publikáld
-4. Importáld a komponenseket a landing page-be
+1. Pick the approach that fits your workflow
+2. Monorepo: install Turborepo
+3. Shared package: create the package and publish
+4. Import components into the landing page
 
-Segíthetek beállítani bármelyik megoldást! 🚀
+You can wire up any of these paths as needed.

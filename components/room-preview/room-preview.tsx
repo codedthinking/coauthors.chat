@@ -1,8 +1,10 @@
-type ChatMessage =
-  | { kind: "system"; text: string }
-  | { kind: "user"; speaker: string; text: string; own?: boolean };
+import type { RoomPreviewChatMessage } from "@/shared/conversation";
+import { RoomPreviewBody } from "./room-preview-body";
+import { RoomPreviewControls } from "./room-preview-controls";
+import { RoomPreviewFooter } from "./room-preview-footer";
+import { RoomPreviewHeader } from "./room-preview-header";
 
-const MESSAGES: ChatMessage[] = [
+const MESSAGES: RoomPreviewChatMessage[] = [
   {
     kind: "user",
     speaker: "Miklós",
@@ -26,6 +28,7 @@ const MESSAGES: ChatMessage[] = [
     kind: "user",
     speaker: "Dia",
     text: "Adipiscing elit, sed do eiusmod",
+    rightAlign: true,
   },
   {
     kind: "user",
@@ -34,11 +37,6 @@ const MESSAGES: ChatMessage[] = [
     own: true,
   },
 ];
-
-import { RoomPreviewFooter } from "./room-preview-footer";
-import { RoomPreviewControls } from "./room-preview-controls";
-import { RoomPreviewHeader } from "./room-preview-header";
-import { RoomPreviewBody } from "./room-preview-body";
 
 export function RoomPreview() {
   const topCardStyle = {

@@ -1,6 +1,6 @@
 export function RoomPreviewHeader() {
   return (
-    <div className="flex h-20 w-full items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
+    <div className="flex w-full items-center justify-between border-b border-gray-200 bg-white px-[32px] py-[20px]">
       <div className="flex items-center gap-[16px] min-w-0 flex-1">
         <div className="h-3 w-3 rounded-full bg-[#22C55E] shrink-0" />
         <div

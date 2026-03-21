@@ -1,16 +1,19 @@
-type ChatMessage =
-  | { kind: "system"; text: string }
-  | { kind: "user"; speaker: string; text: string; own?: boolean };
+import type { RoomPreviewChatMessage } from "@/shared/conversation";
+import { isSameSpeakerAsPrevious, needsBlockGapAbove } from "@/shared/conversation";
 
-export function RoomPreviewBody({ messages }: { messages: ChatMessage[] }) {
+export function RoomPreviewBody({
+  messages,
+}: {
+  messages: RoomPreviewChatMessage[];
+}) {
   return (
-    <div className="flex-1 min-h-0 overflow-y-auto bg-white px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 lg:pt-6 pb-1 sm:pb-1.5 lg:pb-2">
+    <div className="flex-1 min-h-0 overflow-y-auto bg-white px-[96px] py-[32px]">
       {messages.map((msg, idx) => {
         if (msg.kind === "system") {
           return (
             <p
               key={idx}
-              className="conversation-system-msg mt-3 sm:mt-4 lg:mt-6 mb-3 sm:mb-4 lg:mb-6"
+              className={`conversation-system-msg mb-6 ${needsBlockGapAbove(messages, idx) ? "mt-6" : ""}`}
             >
               {msg.text}
             </p>
@@ -21,13 +24,45 @@ export function RoomPreviewBody({ messages }: { messages: ChatMessage[] }) {
           ? "conversation-bubble"
           : "conversation-bubble-other";
 
-        return (
-          <div key={idx} className="mb-2 sm:mb-3 lg:mb-4">
-            <div className="mb-0.5 sm:mb-1">
-              <span className="text-sm font-semibold text-[#171717]">
-                {msg.speaker}
-              </span>
+        const nameClass =
+          "text-xs sm:text-sm font-medium text-[#171717] truncate max-w-full";
+
+        const showSpeakerName = !isSameSpeakerAsPrevious(messages, idx);
+        const gapBefore = needsBlockGapAbove(messages, idx) ? "mt-6" : "";
+        /* Tight stack within one speaker group (coauthors-dev: mb-1) */
+        const stackSpacing = "mb-1";
+
+        if (msg.rightAlign) {
+          return (
+            <div
+              key={idx}
+              className={`${gapBefore} ${stackSpacing} flex flex-col items-end text-right`}
+            >
+              {showSpeakerName && (
+                <div className="mb-0.5 sm:mb-1 w-full flex justify-end min-w-0">
+                  <span className={nameClass}>{msg.speaker}</span>
+                </div>
+              )}
+              <div className="w-full flex justify-end">
+                <div
+                  className={`${bubbleClass} inline-block px-4 py-2 max-w-full sm:max-w-[560px] break-words`}
+                >
+                  <p className="font-work-sans text-sm leading-[140%] text-[#171717]">
+                    {msg.text}
+                  </p>
+                </div>
+              </div>
             </div>
+          );
+        }
+
+        return (
+          <div key={idx} className={`${gapBefore} ${stackSpacing}`}>
+            {showSpeakerName && (
+              <div className="mb-0.5 sm:mb-1">
+                <span className={nameClass}>{msg.speaker}</span>
+              </div>
+            )}
             <div
               className={`${bubbleClass} inline-block px-4 py-2 max-w-full sm:max-w-[560px] break-words`}
             >
@@ -41,4 +76,3 @@ export function RoomPreviewBody({ messages }: { messages: ChatMessage[] }) {
     </div>
   );
 }
-
