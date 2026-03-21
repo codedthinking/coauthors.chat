@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import {
   TranscribeIcon,
   SummarizeIcon,
@@ -18,17 +15,13 @@ const ACTIONS = [
 ];
 
 export function RoomPreviewControls() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMicClicked, setIsMicClicked] = useState(false);
-
   return (
     <div className="bg-white px-4 sm:px-5 lg:px-6 pt-6 sm:pt-4 lg:pt-4 pb-6 sm:pb-3 lg:pb-3">
       <div className="flex items-center justify-center gap-10 flex-wrap">
-        {/* Mute button (static, unmuted) */}
+        {/* Mute button (static preview) */}
         <button
           type="button"
-          onClick={() => setIsMicClicked(!isMicClicked)}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-transparent bg-[#F79C7D] text-[#2C223B] cursor-pointer relative"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-transparent bg-[#F79C7D] text-[#2C223B] cursor-default relative"
         >
           <svg
             className="h-5 w-5"
@@ -43,13 +36,9 @@ export function RoomPreviewControls() {
               d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
             />
           </svg>
-          {/* Diagonal strikethrough on click */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className={`w-full h-0.5 bg-[#2C223B] transform -rotate-45 transition-transform duration-200 ${isMicClicked ? 'scale-110' : 'scale-0'}`}></div>
-          </div>
         </button>
 
-        {/* Action buttons - Desktop: always visible, Mobile: collapse to menu */}
+        {/* Action buttons - Desktop */}
         <div className="hidden lg:flex items-center gap-1 flex-wrap justify-center">
           {ACTIONS.map((action, index) => (
             <span key={action.id} className="flex items-center">
@@ -71,13 +60,9 @@ export function RoomPreviewControls() {
           ))}
         </div>
 
-        {/* Mobile: Collapsed menu button */}
-        <div className="lg:hidden relative">
-          <button
-            type="button"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-transparent bg-[#FDE7DA] text-[#2C223B] cursor-pointer"
-          >
+        {/* Mobile: native <details> menu (no client JS) */}
+        <details className="lg:hidden relative">
+          <summary className="flex h-10 w-10 shrink-0 list-none cursor-pointer items-center justify-center rounded-full border border-transparent bg-[#FDE7DA] text-[#2C223B] [&::-webkit-details-marker]:hidden">
             <svg
               className="h-5 w-5"
               fill="none"
@@ -91,32 +76,27 @@ export function RoomPreviewControls() {
                 d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
               />
             </svg>
-          </button>
-
-          {/* Mobile dropdown menu */}
-          {isMenuOpen && (
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[200px] z-10">
-              {ACTIONS.map((action) => (
-                <button
-                  key={action.id}
-                  type="button"
-                  className="room-action-button w-full px-4 py-2.5 text-left hover:bg-gray-50 flex items-center gap-3 text-sm font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="room-action-icon-box shrink-0">
-                    <action.icon />
-                  </span>
-                  <span className="font-work-sans">{action.label}</span>
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+          </summary>
+          <div className="absolute bottom-full left-1/2 z-10 mb-2 min-w-[200px] -translate-x-1/2 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
+            {ACTIONS.map((action) => (
+              <button
+                key={action.id}
+                type="button"
+                className="room-action-button flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm font-medium hover:bg-gray-50"
+              >
+                <span className="room-action-icon-box shrink-0">
+                  <action.icon />
+                </span>
+                <span className="font-work-sans">{action.label}</span>
+              </button>
+            ))}
+          </div>
+        </details>
 
         {/* Leave button */}
         <button
           type="button"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-[#FB923C] cursor-pointer"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-[#FB923C] cursor-default"
         >
           <svg
             className="h-5 w-5"
@@ -136,4 +116,3 @@ export function RoomPreviewControls() {
     </div>
   );
 }
-

@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { FormInput } from "@/components/ui/form-input";
-import { PrimaryButton } from "@/components/ui/primary-button";
+import { CtaLink } from "@/components/ui/cta-link";
 
 export function JoinRoomForm() {
   return (
@@ -12,12 +11,14 @@ export function JoinRoomForm() {
         {/* Email input */}
         <FormInput type="email" placeholder="allansmith@university.edu" />
 
-        {/* Primary action button */}
-        <Link href="https://coautho.rs/" className="w-full max-w-[380px]">
-          <PrimaryButton type="button" className="w-full">
-            Join room
-          </PrimaryButton>
-        </Link>
+        {/* Same primary CTA as header */}
+        <CtaLink
+          href="https://coautho.rs/"
+          variant="primary"
+          className="w-full max-w-[380px]"
+        >
+          Join room
+        </CtaLink>
       </div>
     </div>
   );

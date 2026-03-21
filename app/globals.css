@@ -148,6 +148,29 @@
   box-shadow: 0px 4px 12px -2px rgba(23, 23, 23, 0.15), 0px 8px 16px -2px rgba(23, 23, 23, 0.1);
 }
 
+/* CtaLink variant="primary" — Light-Radial + pill radius (design spec) */
+.cta-link-primary {
+  border-radius: 1234px;
+  background: var(
+    --Light-Radial,
+    linear-gradient(0deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%),
+    radial-gradient(240.04% 148.54% at 103.55% -72.22%, #a9c9d9 0%, rgba(169, 201, 217, 0) 100%),
+    radial-gradient(134.14% 157.77% at 0% 109.89%, #c5adeb 0%, rgba(197, 173, 235, 0) 100%),
+    radial-gradient(68.33% 60.58% at 29.1% 2.82%, rgba(249, 244, 238, 0.3) 0%, rgba(249, 244, 238, 0) 100%),
+    radial-gradient(101.21% 263.87% at 61.61% -127.72%, #fccb85 0%, rgba(252, 203, 133, 0) 100%),
+    radial-gradient(63.87% 49.81% at 44.34% 0%, rgba(252, 166, 134, 0.3) 0%, rgba(245, 144, 117, 0) 100%),
+    radial-gradient(30.47% 47.14% at 69.48% 43.82%, rgba(252, 203, 133, 0.3) 0%, rgba(252, 203, 133, 0) 100%),
+    radial-gradient(51.92% 70.37% at 78.81% 87.51%, rgba(252, 166, 134, 0.3) 0%, rgba(245, 144, 117, 0) 100%),
+    #f79c7d
+  );
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.15s ease;
+}
+
+.cta-link-primary:hover {
+  opacity: 0.9;
+  box-shadow: 0px 4px 12px -2px rgba(23, 23, 23, 0.15), 0px 8px 16px -2px rgba(23, 23, 23, 0.1);
+}
+
 /* Main gradient background - reusable for buttons and other elements */
 .bg-gradient-main {
   background: 

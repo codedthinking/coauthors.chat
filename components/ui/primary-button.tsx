@@ -13,9 +13,9 @@ export function PrimaryButton({
     <button
       {...props}
       className={[
-        "inline-flex items-center justify-center h-[46px] min-w-0 cursor-pointer rounded-full bg-gradient-light-radial",
-        "font-work-sans text-base font-bold leading-[22px] tracking-[-0.7%] text-[#171717]",
-        "transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50",
+        "primary-button inline-flex items-center justify-center h-[46px] min-w-0 cursor-pointer rounded-full px-6",
+        "font-work-sans font-medium text-base leading-[22px] tracking-[-0.112px] text-[#171717]",
+        "gap-2 sm:gap-3 transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50",
         className ?? "",
       ].join(" ")}
     >

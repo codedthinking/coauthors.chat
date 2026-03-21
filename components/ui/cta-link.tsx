@@ -18,7 +18,7 @@ export function CtaLink({
     "font-work-sans font-medium text-base leading-[22px] tracking-[-0.112px]";
   const commonBaseClass = "flex items-center justify-center text-[#171717]";
 
-  const primaryClass = `primary-button h-[46px] px-6 rounded-full ${commonTypeClass} ${commonBaseClass} gap-2 sm:gap-3 hover:opacity-90 transition-opacity`;
+  const primaryClass = `cta-link-primary h-[46px] px-6 ${commonTypeClass} ${commonBaseClass} gap-2 sm:gap-3`;
 
   const heroBaseClass = `px-6 py-2.5 rounded-[1234px] ${commonTypeClass} ${commonBaseClass} gap-3`;
 
