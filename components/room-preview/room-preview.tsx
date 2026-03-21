@@ -69,8 +69,11 @@ export function RoomPreview() {
         <RoomPreviewControls />
         <RoomPreviewFooter />
       </div>
-      {/* Top card: header + conversation body */}
-      <div className="flex flex-col overflow-hidden" style={topCardStyle}>
+      {/* Top card: header + conversation body — min height so more transcript shows before hero clips */}
+      <div
+        className="flex min-h-0 flex-col overflow-hidden lg:min-h-[592px]"
+        style={topCardStyle}
+      >
         <RoomPreviewHeader />
         <RoomPreviewBody messages={MESSAGES} />
       </div>
