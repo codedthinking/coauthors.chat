@@ -4,6 +4,9 @@ import { RoomPreviewControls } from "./room-preview-controls";
 import { RoomPreviewFooter } from "./room-preview-footer";
 import { RoomPreviewHeader } from "./room-preview-header";
 
+/** Applied from the `lg` breakpoint via `--room-preview-desktop-scale` (see root `div`). */
+const ROOM_PREVIEW_DESKTOP_SCALE = 0.9;
+
 const MESSAGES: RoomPreviewChatMessage[] = [
   {
     kind: "user",
@@ -52,20 +55,24 @@ export function RoomPreview() {
   };
 
   return (
-    <div className="w-full mx-auto max-w-[900px] flex flex-col gap-[20px]">
-
+    <div
+      className="mx-auto flex w-full max-w-[900px] origin-top flex-col gap-[20px] lg:[transform:scale(var(--room-preview-desktop-scale))]"
+      style={
+        {
+          "--room-preview-desktop-scale": ROOM_PREVIEW_DESKTOP_SCALE,
+        } as React.CSSProperties
+      }
+    >
       {/* Bottom card: controls + room footer */}
-      <div className="overflow-hidden flex flex-col" style={bottomCardStyle}>
+      <div className="flex flex-col overflow-hidden" style={bottomCardStyle}>
         <RoomPreviewControls />
         <RoomPreviewFooter />
       </div>
       {/* Top card: header + conversation body */}
-      <div className="overflow-hidden flex flex-col" style={topCardStyle}>
+      <div className="flex flex-col overflow-hidden" style={topCardStyle}>
         <RoomPreviewHeader />
         <RoomPreviewBody messages={MESSAGES} />
       </div>
-
     </div>
   );
 }
-
