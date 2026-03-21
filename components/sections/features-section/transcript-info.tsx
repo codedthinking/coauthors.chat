@@ -4,7 +4,7 @@ export function TranscriptInfo() {
   return (
     <div className="flex flex-col gap-6 items-start">
       {/* Label */}
-      <Label>Label</Label>
+      <Label>Frictionless</Label>
 
       {/* Heading */}
       <h2 className="font-work-sans font-normal text-[36px] leading-[119%] tracking-[-0.05em] text-gray-900 text-center lg:text-left">
@@ -24,7 +24,8 @@ export function TranscriptInfo() {
 
       {/* Description */}
       <p className="font-work-sans font-normal text-sm leading-[120%] tracking-[-0.02em] text-gray-600 max-w-md text-center lg:text-left">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, erat sit amet condimentum vulputate, ex libero placerat.
+      No typing. No manual recording. No third-party AI assistants. <br />
+      Just talk like you are at a conference coffee break.
       </p>
     </div>
   );
