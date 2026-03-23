@@ -12,7 +12,7 @@ export function BrandMark({ variant = "header" }: BrandMarkProps) {
       <span className="text-[32px] leading-[100%]">
         <CoauthorsWordmark variant={variant} />
       </span>
-      <BantaeMarkSvg className="self-end mt-[2px] h-3 w-[54px] shrink-0" />
+      <BantaeMarkSvg className="self-end mt-[2px] h-[10px] w-[45px] shrink-0 sm:h-3 sm:w-[54px]" />
     </Link>
   );
 }

@@ -54,7 +54,7 @@ export default function RootLayout({
       <body
         className={`${workSans.variable} antialiased`}
       >
-        <div className="p-8">{children}</div>
+        <div className="p-0 sm:p-8">{children}</div>
       </body>
     </html>
   );
