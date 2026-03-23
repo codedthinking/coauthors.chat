@@ -11,7 +11,7 @@ export function RoomPreviewBody({
   messages: RoomPreviewChatMessage[];
 }) {
   return (
-    <div className="flex-1 min-h-0 overflow-y-auto bg-white px-[60px] py-[20px]">
+    <div className="flex-1 min-h-0 overflow-y-auto bg-white px-[18px] py-[32px] sm:px-[60px] sm:py-[20px]">
       {messages.map((msg, idx) => {
         if (msg.kind === "system") {
           return (

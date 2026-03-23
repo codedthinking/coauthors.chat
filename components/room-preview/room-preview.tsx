@@ -65,7 +65,7 @@ export function RoomPreview() {
       }
     >
       {/* Bottom card: controls + room footer */}
-      <div className="flex flex-col overflow-hidden" style={bottomCardStyle}>
+      <div className="flex flex-col overflow-visible lg:overflow-hidden" style={bottomCardStyle}>
         <RoomPreviewControls />
         <RoomPreviewFooter />
       </div>

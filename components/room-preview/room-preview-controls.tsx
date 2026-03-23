@@ -16,7 +16,7 @@ const ACTIONS = [
 
 export function RoomPreviewControls() {
   return (
-    <div className="bg-white px-4 sm:px-5 lg:px-6 pt-6 sm:pt-4 lg:pt-4 pb-6 sm:pb-3 lg:pb-3">
+    <div className="bg-white rounded-t-[20px] px-4 sm:px-5 lg:px-6 pt-6 sm:pt-4 lg:pt-4 pb-6 sm:pb-3 lg:pb-3">
       <div className="flex items-center justify-center gap-10 flex-wrap">
         {/* Mute button (static preview) */}
         <button
