@@ -100,7 +100,8 @@
 
 .room-control-separator {
   width: 1px;
-  height: 1.25rem;
+  height: 28px;
+  margin-inline: 4px;
   background: #CBD5E1;
   flex-shrink: 0;
 }

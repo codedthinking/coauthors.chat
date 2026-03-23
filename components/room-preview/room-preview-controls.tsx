@@ -60,38 +60,45 @@ export function RoomPreviewControls() {
           ))}
         </div>
 
-        {/* Mobile: native <details> menu (no client JS) */}
-        <details className="lg:hidden relative">
-          <summary className="flex h-10 w-10 shrink-0 list-none cursor-pointer items-center justify-center rounded-full border border-transparent bg-[#FDE7DA] text-[#2C223B] [&::-webkit-details-marker]:hidden">
-            <svg
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
-          </summary>
-          <div className="absolute bottom-full left-1/2 z-10 mb-2 min-w-[200px] -translate-x-1/2 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
-            {ACTIONS.map((action) => (
+        {/* Mobile: first three icons + overflow menu */}
+        <div className="flex lg:hidden items-center">
+          {ACTIONS.slice(0, 3).map((action) => (
+            <span key={action.id} className="flex items-center">
               <button
-                key={action.id}
                 type="button"
-                className="room-action-button flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm font-medium hover:bg-gray-50"
+                className="room-action-button inline-flex items-center px-1.5 py-1.5 cursor-default"
+                aria-label={action.label}
               >
                 <span className="room-action-icon-box shrink-0">
                   <action.icon />
                 </span>
-                <span className="font-work-sans">{action.label}</span>
               </button>
-            ))}
-          </div>
-        </details>
+              <div className="room-control-separator mx-0.5" aria-hidden="true" />
+            </span>
+          ))}
+
+          <details className="relative">
+            <summary className="room-action-button inline-flex list-none cursor-pointer items-center px-1.5 py-1.5 [&::-webkit-details-marker]:hidden">
+              <span className="room-action-icon-box shrink-0">
+                <span className="block text-center text-base leading-none text-[#2C223B]">...</span>
+              </span>
+            </summary>
+            <div className="absolute bottom-full left-1/2 z-10 mb-2 min-w-[200px] -translate-x-1/2 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
+              {ACTIONS.slice(3).map((action) => (
+                <button
+                  key={action.id}
+                  type="button"
+                  className="room-action-button flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm font-medium hover:bg-gray-50"
+                >
+                  <span className="room-action-icon-box shrink-0">
+                    <action.icon />
+                  </span>
+                  <span className="font-work-sans">{action.label}</span>
+                </button>
+              ))}
+            </div>
+          </details>
+        </div>
 
         {/* Leave button */}
         <button
