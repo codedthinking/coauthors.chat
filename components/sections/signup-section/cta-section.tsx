@@ -4,7 +4,7 @@ import { FormInput } from "@/components/ui/form-input";
 
 export function CTASection() {
   return (
-    <div className="mx-auto w-full px-[135px] py-[120px] flex flex-col items-center gap-12 sm:gap-16 lg:gap-24">
+    <div className="mx-auto w-full px-[18px] py-[32px] sm:px-[135px] sm:py-[120px] flex flex-col items-center gap-12 sm:gap-16 lg:gap-24">
       <div className="flex w-full max-w-[540px] flex-col items-center gap-6 text-center">
         {/* Heading */}
         <h2 className="font-work-sans font-normal text-[36px] leading-[119%] tracking-[-0.05em] text-gray-900">

@@ -301,7 +301,7 @@ html {
 
 /* “Interested? Start talking!” — full-width band, same inset rhythm as hero inner (px in component) */
 .coauthors-cta-interested-section {
-  border-radius: 20px;
+  border-radius: 0;
   overflow: hidden;
   background:
     radial-gradient(60.64% 34.93% at -3.92% 52.32%, #a9c9d9 0%, rgba(169, 201, 217, 0) 100%),
@@ -311,4 +311,10 @@ html {
     radial-gradient(28.04% 62% at 83.92% 39.57%, rgba(252, 203, 133, 0.3) 0%, rgba(252, 203, 133, 0) 100%),
     radial-gradient(43.43% 42% at 100% 57.94%, rgba(252, 166, 134, 0.3) 0%, rgba(245, 144, 117, 0) 100%),
     #fcfcfc;
+}
+
+@media (min-width: 640px) {
+  .coauthors-cta-interested-section {
+    border-radius: 20px;
+  }
 }

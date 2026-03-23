@@ -5,7 +5,7 @@ import { RoomPreview } from "@/components/room-preview/room-preview";
 export function Hero() {
   return (
     <section className="w-full bg-transparent relative overflow-hidden">
-      <div className="mx-auto px-[12px] sm:px-[52px] pt-10 sm:pt-8 lg:pt-12 pb-0 lg:pb-[8px]">
+      <div className="mx-auto px-[12px] sm:px-[52px] pt-20 sm:pt-8 lg:pt-12 pb-0 lg:pb-[8px]">
         <div className="grid lg:grid-cols-2 gap-12 sm:gap-12 lg:gap-24 items-center">
           {/* Left content */}
           <div className="flex flex-col gap-6 items-start lg:-translate-y-[30px]">
@@ -51,7 +51,7 @@ export function Hero() {
           </div>
 
           {/* Right side - Room preview */}
-          <div className="w-full max-w-none sm:max-w-[900px] -mx-[35px] sm:mx-auto lg:mx-0 justify-self-center lg:justify-self-start mb-0 lg:translate-y-12">
+          <div className="w-full max-w-none sm:max-w-[900px] -mx-[35px] sm:mx-auto lg:mx-0 justify-self-center lg:justify-self-start mb-[6px] sm:-mb-[10px] lg:translate-y-12">
             <RoomPreview />
           </div>
         </div>

@@ -4,10 +4,10 @@ import { TranscriptInfo } from "./transcript-info";
 export function FeaturesSection() {
   return (
     <section className="w-full bg-transparent pt-12 pb-8 sm:pt-1 sm:pb-12 lg:py-16">
-      <div className="max-w-[1440px] mx-auto px-[35px]">
+      <div className="max-w-[1440px] mx-auto px-[12px] sm:px-[52px]">
         <div className="grid lg:grid-cols-2 gap-16 sm:gap-20 lg:gap-48 items-start justify-items-center lg:justify-items-start">
           {/* Left side - Chat layout */}
-          <div className="ml-0 lg:ml-[49px] order-2 lg:order-1">
+          <div className="w-full lg:w-auto ml-0 lg:ml-[49px] order-2 lg:order-1">
             <ChatLayout />
           </div>
 

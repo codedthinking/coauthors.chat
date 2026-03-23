@@ -43,7 +43,6 @@ const MESSAGES: RoomPreviewChatMessage[] = [
 
 export function RoomPreview() {
   const topCardStyle = {
-    borderRadius: 20,
     background: "var(--webapp-gray-gray-0-white, #FFF)",
     boxShadow:
       "0 2.456px 4.913px -1.228px rgba(23, 23, 23, 0.10), 0 1.228px 2.456px -1.228px rgba(23, 23, 23, 0.06)",
@@ -71,7 +70,7 @@ export function RoomPreview() {
       </div>
       {/* Top card: header + conversation body — min height so more transcript shows before hero clips */}
       <div
-        className="flex min-h-0 flex-col overflow-hidden lg:min-h-[592px]"
+        className="flex min-h-0 flex-col overflow-hidden rounded-[20px] sm:rounded-t-[20px] sm:rounded-b-none lg:min-h-[592px]"
         style={topCardStyle}
       >
         <RoomPreviewHeader />

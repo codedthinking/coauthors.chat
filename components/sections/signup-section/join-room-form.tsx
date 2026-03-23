@@ -3,7 +3,7 @@ import { CtaLink } from "@/components/ui/cta-link";
 
 export function JoinRoomForm() {
   return (
-    <div className="w-full max-w-[411px] lg:max-w-[460px] lg:w-[460px] rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
+    <div className="w-full max-w-[411px] lg:max-w-[460px] lg:w-[460px] rounded-[20px] border border-gray-200 bg-white p-8 shadow-lg">
       <div className="flex w-full flex-col items-center space-y-3">
         {/* Name input */}
         <FormInput type="text" placeholder="Allan" />
