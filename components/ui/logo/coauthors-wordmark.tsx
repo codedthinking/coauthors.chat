@@ -83,7 +83,6 @@ export function CoauthorsWordmark({
           fill="currentColor"
         />
       </svg>
-
     </span>
   );
 }

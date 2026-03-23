@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { BrandMark } from "@/components/ui/brand-mark";
+import { BrandMark } from "@/components/ui/logo";
 import { CtaLink } from "@/components/ui/cta-link";
 
 export function Header() {

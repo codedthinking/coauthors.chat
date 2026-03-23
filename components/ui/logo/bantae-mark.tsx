@@ -1,11 +1,4 @@
-import Link from "next/link";
-import { CoauthorsWordmark } from "@/components/ui/coauthors-wordmark";
-
-type BrandMarkProps = {
-  variant?: "header" | "footer";
-};
-
-function BantaeMarkSvg({ className }: { className?: string }) {
+export function BantaeMarkSvg({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -49,16 +42,5 @@ function BantaeMarkSvg({ className }: { className?: string }) {
         fill="#2C223B"
       />
     </svg>
-  );
-}
-
-export function BrandMark({ variant = "header" }: BrandMarkProps) {
-  return (
-    <Link href="/" className="flex flex-col items-start">
-      <span className="text-[32px] leading-[100%]">
-        <CoauthorsWordmark variant={variant} />
-      </span>
-      <BantaeMarkSvg className="self-end -mt-[2px] h-3 w-[54px] shrink-0" />
-    </Link>
   );
 }
