@@ -15,7 +15,7 @@ export default function Home() {
         <Hero />
       </div>
 
-      <main className="min-h-screen relative z-0 flex flex-col gap-12 sm:gap-20 lg:gap-48 pt-[96px] sm:pt-[120px]">
+      <main className="min-h-screen relative z-0 flex flex-col gap-12 sm:gap-20 lg:gap-48 pt-[96px] sm:pt-[120px] lg:pt-[168px]">
         <FeaturesSection />
         <CommandsSection />
         <SignupSection />
