@@ -18,17 +18,16 @@ export function RoomPreviewControls() {
   return (
     <div className="bg-white rounded-t-[20px] px-4 sm:px-5 lg:px-6 pt-6 sm:pt-4 lg:pt-4 pb-6 sm:pb-3 lg:pb-3">
       <div className="flex items-center justify-center gap-10 flex-wrap">
-        {/* Mute button (static preview) */}
-        <button
-          type="button"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-transparent bg-[#F79C7D] text-[#2C223B] cursor-default relative"
-        >
+        {/* Mute button */}
+        <label className="group relative flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full border border-transparent bg-[#F79C7D] text-[#2C223B] transition-transform hover:scale-[1.02] active:scale-[0.98]">
+          <input type="checkbox" className="peer sr-only" aria-label="Toggle microphone mute" />
           <svg
             className="h-5 w-5"
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -36,7 +35,11 @@ export function RoomPreviewControls() {
               d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
             />
           </svg>
-        </button>
+          <span
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[24px] w-[2px] -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-full bg-[#2C223B] opacity-0 shadow-[0_0_0_1px_rgba(247,156,125,0.45)] transition-opacity duration-150 peer-checked:opacity-100"
+            aria-hidden="true"
+          />
+        </label>
 
         {/* Action buttons - Desktop */}
         <div className="hidden lg:flex items-center gap-1 flex-wrap justify-center">
@@ -101,9 +104,10 @@ export function RoomPreviewControls() {
         </div>
 
         {/* Leave button */}
-        <button
-          type="button"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-[#FB923C] cursor-default"
+        <a
+          href="https://coautho.rs/"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-[#FB923C]"
+          aria-label="Leave room"
         >
           <svg
             className="h-5 w-5"
@@ -118,7 +122,7 @@ export function RoomPreviewControls() {
               d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1"
             />
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   );
