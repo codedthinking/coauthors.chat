@@ -9,7 +9,7 @@ export default function Home() {
       {/* Gradient extends behind the layout header (negative margin overlap). */}
       <div className="relative isolate -mt-[104px] rounded-[20px] pt-[104px]">
         <div
-          className="coauthors-hero-upper-bg rounded-[20px]"
+          className="coauthors-hero-upper-bg pointer-events-none rounded-[20px]"
           aria-hidden="true"
         />
         <Hero />
