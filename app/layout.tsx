@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   authors: [{ name: "CoAuthors" }],
   creator: "CoAuthors",
   metadataBase: new URL("https://coauthors.chat"),
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
