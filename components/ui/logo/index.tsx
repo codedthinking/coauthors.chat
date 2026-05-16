@@ -4,11 +4,15 @@ import { CoauthorsWordmark } from "./coauthors-wordmark";
 
 type BrandMarkProps = {
   variant?: "header" | "footer";
+  className?: string;
 };
 
-export function BrandMark({ variant = "header" }: BrandMarkProps) {
+export function BrandMark({ variant = "header", className }: BrandMarkProps) {
   return (
-    <Link href="/" className="flex flex-col items-start">
+    <Link
+      href="/"
+      className={["flex flex-col items-start", className].filter(Boolean).join(" ")}
+    >
       <span className="text-[32px] leading-[100%]">
         <CoauthorsWordmark variant={variant} />
       </span>
