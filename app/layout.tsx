@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
+import { ScrollToTop } from "@/components/layout/scroll-to-top";
 import "./globals.css";
 
 const workSans = Work_Sans({
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body
         className={`${workSans.variable} antialiased`}
       >
+        <ScrollToTop />
         <div className="p-0 sm:p-8">{children}</div>
       </body>
     </html>
