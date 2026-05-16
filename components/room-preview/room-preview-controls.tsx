@@ -14,12 +14,14 @@ const ACTIONS = [
   { id: "add-custom", label: "Add custom", icon: AddCustomIcon },
 ];
 
-export function RoomPreviewControls() {
+export function RoomPreviewControls({ micActive = false }: { micActive?: boolean }) {
   return (
     <div className="bg-white rounded-t-[20px] px-4 sm:px-5 lg:px-6 pt-6 sm:pt-4 lg:pt-4 pb-6 sm:pb-3 lg:pb-3">
       <div className="flex items-center justify-center gap-10 flex-wrap">
         {/* Mute button */}
-        <label className="group relative flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full border border-transparent bg-[#F79C7D] text-[#2C223B] transition-transform hover:scale-[1.02] active:scale-[0.98]">
+        <label
+          className={`group relative flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full border border-transparent bg-[#F79C7D] text-[#2C223B] transition-transform hover:scale-[1.02] active:scale-[0.98] ${micActive ? "room-preview-mic-live" : ""}`}
+        >
           <input type="checkbox" className="peer sr-only" aria-label="Toggle microphone mute" />
           <svg
             className="h-5 w-5"

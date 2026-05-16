@@ -2,15 +2,20 @@
  * Conversation bubble text row + “typing” caret (pseudo-shared; aligns with room / marketing preview).
  */
 
-/** Vertical caret after text in own (highlight) bubbles. */
-export function BubbleTextCaret() {
+/** Vertical caret inline after text — follows the last line when copy wraps. */
+export function BubbleTextCaret({
+  blink = false,
+  className = "",
+}: {
+  blink?: boolean;
+  className?: string;
+}) {
   return (
     <svg
       aria-hidden
-      className="inline-block h-[calc(1.4em_-_2px)] w-[2px] shrink-0"
+      className={`inline-block h-[1em] w-[2px] shrink-0 align-text-bottom ${blink ? "bubble-caret-blink" : ""} ${className}`}
       viewBox="0 0 2 20"
       preserveAspectRatio="none"
-      overflow="visible"
     >
       <line
         x1="1"
@@ -28,16 +33,18 @@ export function BubbleTextCaret() {
 export type BubbleTextRowProps = {
   text: string;
   showCaret: boolean;
+  caretBlink?: boolean;
 };
 
-/** Text + optional caret; flex centers the bar with the line box (matches leading-[140%]). */
-export function BubbleTextRow({ text, showCaret }: BubbleTextRowProps) {
+/**
+ * Text + optional caret in normal inline flow so the caret stays at the
+ * typewriter end on every wrapped line (not vertically centered on the block).
+ */
+export function BubbleTextRow({ text, showCaret, caretBlink = false }: BubbleTextRowProps) {
   return (
-    <p className="font-work-sans text-sm leading-[140%] text-[#171717]">
-      <span className="inline-flex max-w-full items-center gap-[6px]">
-        <span className="min-w-0 break-words">{text}</span>
-        {showCaret ? <BubbleTextCaret /> : null}
-      </span>
+    <p className="font-work-sans text-sm leading-[140%] text-[#171717] [overflow-wrap:anywhere]">
+      {text}
+      {showCaret ? <BubbleTextCaret blink={caretBlink} className="ml-[6px]" /> : null}
     </p>
   );
 }

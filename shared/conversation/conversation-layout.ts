@@ -11,7 +11,7 @@ export type RoomPreviewChatMessage =
       speaker: string;
       text: string;
       own?: boolean;
-      /** When true, name + bubble align to the right (e.g. Dia) */
+      /** When true, name + bubble align to the right (e.g. Diane) */
       rightAlign?: boolean;
     };
 

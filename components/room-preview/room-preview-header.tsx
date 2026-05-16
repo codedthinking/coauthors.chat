@@ -1,7 +1,13 @@
-export function RoomPreviewHeader() {
+export function RoomPreviewHeader({ participants }: { participants: string[] }) {
+  const label = participants.length > 0 ? participants.join(", ") : "…";
+  const mobileLabel =
+    participants.length <= 2
+      ? label
+      : `${participants.slice(0, 2).join(", ")}...`;
+
   return (
     <div className="flex w-full items-center justify-between border-b border-gray-200 bg-white px-[32px] py-[20px] sm:px-[32px] sm:py-[20px]">
-      <div className="flex items-center gap-[16px] min-w-0 flex-1">
+      <div className="flex min-w-0 flex-1 items-center gap-[16px]">
         <div className="h-3 w-3 rounded-full bg-[#22C55E] shrink-0" />
         <div
           className="px-2 py-1 rounded-[1234px] text-[12px] shrink-0"
@@ -13,12 +19,11 @@ export function RoomPreviewHeader() {
             BANTAE-UI
           </span>
         </div>
-        <span className="text-xs sm:text-sm font-medium text-[#171717] truncate">
-          <span className="hidden sm:inline">Miklós, Dia, Anna, Enikő</span>
-          <span className="sm:hidden">Miklós, Dia...</span>
+        <span className="text-xs sm:text-sm font-medium text-[#171717] truncate transition-opacity duration-300">
+          <span className="hidden sm:inline">{label}</span>
+          <span className="sm:hidden">{mobileLabel}</span>
         </span>
       </div>
     </div>
   );
 }
-
